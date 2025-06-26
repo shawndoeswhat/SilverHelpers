@@ -1,0 +1,10 @@
+name: SilverHelpers
+version: 1.0
+main: com.shawndoeswhat.silverhelpers.SilverHelpers
+commands:
+  discord:
+    description: Link to our Discord server
+    usage: /discord
+  modrinth:
+    description: Link to my Modrinth profile
+    usage: /modrinth
