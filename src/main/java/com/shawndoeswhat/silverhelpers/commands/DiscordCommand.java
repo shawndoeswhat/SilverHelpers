@@ -9,7 +9,9 @@ public class DiscordCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         String link = SilverHelpers.getInstance().getConfig().getString("discord-link");
-        sender.sendMessage("§bJoin our Discord: §f" + link);
+        String message = SilverHelpers.getInstance().getConfig().getString("messages.discord");
+        if (message == null) message = "§bJoin our Discord: §f%link%";
+        sender.sendMessage(message.replace("%link%", link));
         return true;
     }
 }

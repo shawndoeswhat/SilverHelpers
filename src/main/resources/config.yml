@@ -1,2 +1,6 @@
 discord-link: "https://discord.gg/j2t6n2dTde"
 modrinth-link: "https://modrinth.com/user/shawndoeswhat"
+
+messages:
+  discord: "§bJoin our Discord: §f%link%"
+  modrinth: "§aCheck out our Modrinth: §f%link%"

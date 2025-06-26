@@ -9,7 +9,9 @@ public class ModrinthCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         String link = SilverHelpers.getInstance().getConfig().getString("modrinth-link");
-        sender.sendMessage("§aCheck out our Modrinth: §f" + link);
+        String message = SilverHelpers.getInstance().getConfig().getString("messages.modrinth");
+        if (message == null) message = "§aCheck out our Modrinth: §f%link%";
+        sender.sendMessage(message.replace("%link%", link));
         return true;
     }
 }
